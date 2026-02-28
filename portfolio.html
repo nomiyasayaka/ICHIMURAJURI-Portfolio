@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>PORTFOLIO | JURI ICHIMURA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="portfolio-page">
+
+ <div class="fixed-background portfolio-bg"></div>
+
+  <header class="header-box">
+    <p class="tagline">Stylist</p>
+    <div class="header-top">
+      <h1>ICHIMURA JURI</h1>
+      <div class="menu-trigger" id="menu-trigger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    
+    <nav class="main-nav" id="main-nav">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="index.html#works">WORKS</a></li>
+        <li><a href="index.html#portfolio">PORTFOLIO</a></li>
+        <li><a href="index.html#about">ABOUT</a></li>
+        <li><a href="index.html#contact">CONTACT</a></li>
+        <li class="insta-icon">
+          <a href="https://www.instagram.com/juri_ichimura/" target="_blank" rel="noopener noreferrer">
+            <img src="img/instalogo.png" alt="Instagram">
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="gallery-container">
+    <div class="page-header">
+      <h2 class="red-title">PORTFOLIO</h2>
+    </div>
+
+    <main class="gallery-main">
+      <figure class="content-section"><img src="img/IMG-3986.JPG" alt=""></figure>
+      <figure class="content-section"><img src="img/IMG-3987.JPG" alt=""></figure>
+      <figure class="content-section"><img src="img/IMG-3988.JPG" alt=""></figure>
+      <figure class="content-section"><img src="img/IMG-3989.JPG" alt=""></figure>
+      <figure class="content-section"><img src="img/IMG-3990.JPG" alt=""></figure>
+      <figure class="content-section"><img src="img/IMG-3991.JPG" alt=""></figure>
+      <figure class="content-section"><img src="img/IMG-3992.JPG" alt=""></figure>
+      <figure class="content-section"><img src="img/IMG-3993.JPG" alt=""></figure>
+      <figure class="content-section"><img src="img/IMG-3994.JPG" alt=""></figure>
+      <figure class="content-section"><img src="img/IMG-3995.JPG" alt=""></figure>
+      <figure class="content-section"><img src="img/IMG-3996.JPG" alt=""></figure>
+      <figure class="content-section"><img src="img/IMG-3997.JPG" alt=""></figure>
+      <figure class="content-section"><img src="img/IMG-3998.JPG" alt=""></figure>
+      <figure class="content-section"><img src="img/IMG-3999.JPG" alt=""></figure>
+      <figure class="content-section"><img src="img/IMG-4001.JPG" alt=""></figure>
+      <figure class="content-section"><img src="img/IMG-4002.JPG" alt=""></figure>
+      <figure class="content-section"><img src="img/IMG-4003.JPG" alt=""></figure>
+      <figure class="content-section"><img src="img/IMG-4004.JPG" alt=""></figure>
+      <figure class="content-section"><img src="img/IMG-4005.JPG" alt=""></figure>
+      <figure class="content-section"><img src="img/IMG-4006.JPG" alt=""></figure>
+      <figure class="content-section"><img src="img/IMG-4007.JPG" alt=""></figure>
+      <figure class="content-section"><img src="img/IMG-4008.JPG" alt=""></figure>
+<figure class="content-section"><img src="img/331AD6A6-1929-42DE-A547-7B031A058D63.jpeg" alt=""/></figure>
+<figure class="content-section"><img src="img/3135659D-34B3-48F1-845D-D1E425046313.jpeg" alt=""/></figure>
+<figure class="content-section"><img src="img/DFC94795-2C78-4DE7-B1A3-76A3602B9918.jpeg" alt=""/></figure>
+<figure class="content-section"><img src="img/FD521C5B-BE17-4BEB-B2AE-31FE769336B9.jpeg" alt=""/></figure>
+
+
+</main> <div class="button-13 portfolio-btn">
+  <a href="index.html#contact" class="contact-button">BACK TO CONTACT</a>
+</div>
+
+ <footer>
+      <p>&copy;JURI ICHIMURA</p>
+    </footer>
+
+<script>
+    // --- 1. ハンバーガーメニューの制御 ---
+    const trigger = document.getElementById('menu-trigger');
+    const nav = document.getElementById('main-nav');
+
+    if(trigger) {
+      trigger.addEventListener('click', function() {
+        this.classList.toggle('active');
+        nav.classList.toggle('active');
+      });
+    }
+
+    // --- 2. スクロールで画像をふわっと出す制御 ---
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // 画面に入ったら「is-show」クラスを付けて表示させる
+          entry.target.classList.add('is-show');
+        }
+      });
+    }, { 
+      threshold: 0.15 // 画像が15%見えたら動き出す
+    });
+
+    // 全ての .content-section（画像）を監視対象にする
+    document.querySelectorAll('.content-section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+	
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!doctype html>
+
+<html lang="ja">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ICHIMURA JURI | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<style>
+  /* ボタンを右下に固定し、オープニングより手前に出す */
+  .container_01 {
+    position: fixed;
+ right: 20px;  /* 40px → 20px にして右へ寄せる */
+    bottom: 20px; /* 40px → 20px にして下へ寄せる */
+    width: 100px;
+    height: 100px;
+    z-index: 10000;
+  }
+  /* 文字を回すアニメーション */
+  .circle-text_01 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation: rotate-circle 15s linear infinite;
+  }
+  /* 円形配置の軸設定 */
+  .circle-text_01 span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    font-size: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    transform-origin: 0 50px;
+  }
+  /* 中央の矢印 */
+  .arrow_01 {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1px; height: 30px;
+    background: #1a1a1a;
+  }
+  .arrow_01::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%;
+    width: 8px; height: 8px;
+    border-bottom: 1px solid #1a1a1a;
+    border-left: 1px solid #1a1a1a;
+    transform: translateX(-50%) rotate(-45deg);
+  }
+  @keyframes rotate-circle {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+</style>
+	
+</head>
+	
+<body>
+  <div id="opening">
+    <div class="opening-inner">
+
+      <div class="text from-left top-text">
+        <span class="char" style="--char-index: 0">F</span>
+        <span class="char" style="--char-index: 1">A</span>
+        <span class="char" style="--char-index: 2">S</span>
+        <span class="char" style="--char-index: 3">H</span>
+        <span class="char" style="--char-index: 4">I</span>
+        <span class="char" style="--char-index: 5">O</span>
+        <span class="char" style="--char-index: 6">N</span>
+      </div>
+
+      <div class="center-window">
+        <div class="bg-image"></div>
+      </div>
+
+      <div class="text from-right bottom-text">
+        <span class="char" style="--char-index: 0">C</span>
+        <span class="char" style="--char-index: 1">R</span>
+        <span class="char" style="--char-index: 2">E</span>
+        <span class="char" style="--char-index: 3">A</span>
+        <span class="char" style="--char-index: 4">T</span>
+        <span class="char" style="--char-index: 5">E</span>
+      </div>
+
+      <div class="container_01">
+        <a href="#works" class="scroll-down_01">
+          <div class="circle-text_01" id="circle-text-opening">SCROLL DOWN SCROLL DOWN </div>
+          <div class="arrow_01"></div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+	
+<header class="header-box">
+  <div class="header-top">
+    <div class="logo-area">
+      <p class="tagline">stylist</p>
+      <h1>ICHIMURA JURI</h1>
+    </div>
+
+
+
+    <div class="menu-trigger" id="menu-trigger">
+
+      <span></span>
+
+      <span></span>
+
+      <span></span>
+
+    </div>
+
+  </div>
+
+
+
+  <nav class="main-nav" id="main-nav">
+
+    <ul>
+
+      <li><a href="#home">HOME</a></li>
+
+      <li><a href="#works">WORKS</a></li>
+
+      <li><a href="#portfolio">PORTFOLIO</a></li>
+
+      <li><a href="#about">ABOUT</a></li>
+
+      <li><a href="#contact">CONTACT</a></li>
+
+      <li class="insta-icon">
+
+       <a href="https://www.instagram.com/juri_ichimura/" target="_blank" rel="noopener noreferrer" class="insta-link">
+
+  <img src="img/instalogo.png" alt="Instagram">
+
+</a>
+
+      </li>
+
+    </ul>
+
+  </nav>
+
+</header>
+
+  <div class="fixed-background"></div>
+
+
+
+  <main>
+
+    <section id="home" class="spacer-section"></section>
+
+
+
+<section class="content-section" id="works">
+
+  <div class="inner center-shift">
+
+    <h2>WORKS</h2>
+
+    <div class="work-item">
+
+      <img src="img/works1.jpg" alt="">
+
+      <p class="caption">2025 s/s MANIPURI</p>
+
+    </div>
+
+
+
+    <div class="work-item">
+      <div class="video-container">
+        <video controls playsinline muted>
+
+          <source src="動画/nissan.mp4#t=0.5" type="video/mp4">
+        </video>
+      </div>
+      <p class="caption">2025 NISSAN X-TRAIL TVCM</p>
+    </div>
+    <div class="work-item">
+      <div class="video-container">
+        <video controls playsinline muted>
+          <source src="動画/Con_30.mp4#t=0.8" type="video/mp4">
+        </video>
+      </div>
+      <p class="caption">2025 村田製作所 TVCM </p>
+      <p class="caption">『Small is Dynamic コンデンサ篇』</p>
+    </div>
+    <div class="work-item">
+      <div class="video-container">
+        <video controls playsinline muted>
+          <source src="動画/Sen_30.mp4#t=0.5" type="video/mp4">
+        </video>
+      </div>
+      <p class="caption">2025 村田製作所 TVCM</p>
+      <p class="caption"> 『Small is Dynamic MEMS慣性力センサ篇』</p>
+    </div>
+  </div>
+</section>
+
+
+    <section class="content-section" id="portfolio">
+      <div class="inner center-shift">
+        <h2 class="red-title">PORTFOLIO</h2>
+        <div class="portfolio-grid">
+          <img src="img/1.jpg" alt=""><img src="img/2.jpg" alt=""><img src="img/3.jpg" alt="">
+          <img src="img/4.jpg" alt=""><img src="img/5.jpg" alt=""><img src="img/6.jpg" alt="">
+        </div>
+         <div class="button-13">
+<a href="portfolio.html">VIEW MORE</a>
+</div>
+      </div>
+    </section>
+    <section class="content-section" id="about">
+      <div class="inner center-shift about-text">
+        <h2>ABOUT</h2>
+        <p class="name">JURI ICHIMURA</p>
+        <p>栃木県真岡市生まれ</p>
+        <p>スタイリスト山田直樹氏に師事後、独立</p>
+      </div>
+    </section>
+<section class="content-section" id="contact">
+  <div class="inner center-shift">
+    <h2>CONTACT</h2>
+    <div class="contact-area">
+      <p>仕事のご依頼・お問い合わせはメールにて承っております。</p>
+      <a href="mailto:your-email@example.com" class="contact-button">
+        お問い合わせはこちら 
+      </a>
+    </div>
+  </div>
+</section>
+  </main>
+  <footer>
+    <p>&copy;JURI ICHIMURA</p>
+  </footer>
+<script>
+  // --- 1. メニュー（ハンバーガー）の制御 ---
+  const trigger = document.getElementById('menu-trigger');
+  const nav = document.getElementById('main-nav');
+  if (trigger && nav) {
+    trigger.addEventListener('click', () => {
+      trigger.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+    const links = document.querySelectorAll('.main-nav a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        trigger.classList.remove('active');
+        nav.classList.remove('active');
+      });
+    });
+  }
+  // --- 2. オープニングアニメーションとスクロール制御 ---
+  window.addEventListener('load', () => {
+    const texts = document.querySelectorAll('.text');
+    const opening = document.getElementById('opening');
+    const topText = document.querySelector('.top-text');
+    const bottomText = document.querySelector('.bottom-text');
+    const windowEl = document.querySelector('.center-window');
+    const bgImg = document.querySelector('.bg-image');
+    // 【登場】0.1秒後に一文字ずつパラパラ動かす
+    setTimeout(() => {
+      texts.forEach(t => t.classList.add('is-active'));
+    }, 100);
+    // 【スクロール】連動アニメーション
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+    // ★文字を飛ばすスピードを「1.5」から「4.0」くらいに上げる（すぐ画面外へ消える）
+  if (topText) topText.style.transform = `translateY(-${scrollY * 4.0}px)`;
+  if (bottomText) bottomText.style.transform = `translateY(${scrollY * 4.0}px)`;
+
+		// ★中央の窓が消えるスピードも速める（800→300）
+  const scaleValue = Math.max(0, 1 - (scrollY / 500));
+  if (windowEl) {
+      windowEl.style.transform = `translate(-50%, -50%) scale(${scaleValue})`;
+      windowEl.style.opacity = 1 - (scrollY / 300);
+  }
+      if (bgImg) {
+          bgImg.style.transform = `scale(${1.2 + (scrollY / 600)})`;
+      }
+// ★ここが本番！1200pxから「300px」に減らす
+  if (opening) {
+    if (scrollY > 300) { // 300px（少しのスクロール）で完全に消す
+      opening.style.display = 'none';
+    } else {
+      opening.style.display = 'flex';
+    }
+      }
+    });
+  });
+</script>
+	<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-show');
+    }
+  });
+}, { 
+  threshold: 0.1,
+  // ★ 画面の下から10%くらい入ってきたら反応させる（スマホ対策）
+  rootMargin: "0px 0px -10% 0px" 
+});
+
+document.querySelectorAll('.content-section').forEach(section => {
+  observer.observe(section);
+});
+
+// オープニング終了に合わせて一番上（WORKS）を出す
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const firstSection = document.querySelector('#works');
+    if (firstSection) firstSection.classList.add('is-show');
+  }, 800); 
+});
+</script>
+	<script>
+		// スクロールボタンの文字を円形に配置する
+const textElement = document.getElementById('circle-text');
+if (textElement) {
+  const text = textElement.innerText;
+  textElement.innerText = '';
+  for (let i = 0; i < text.length; i++) {
+    const span = document.createElement('span');
+    span.innerText = text[i];
+    span.style.transform = `rotate(${i * (360 / text.length)}deg)`;
+    textElement.appendChild(span);
+  }
+}
+	</script>
+	<script>
+		// オープニングのくるくるボタンの文字を円形に並べる
+const openCircle = document.getElementById('circle-text-opening');
+if (openCircle) {
+  const text = openCircle.innerText; // "SCROLL DOWN SCROLL DOWN " を取得
+  openCircle.innerText = ''; // 一旦中身を空にする
+  
+  for (let i = 0; i < text.length; i++) {
+    const span = document.createElement('span');
+    span.innerText = text[i];
+    // 1文字ずつ角度をつけて円状に配置
+    span.style.transform = `rotate(${i * (360 / text.length)}deg)`;
+    openCircle.appendChild(span);
+  }
+}
+	</script>
+</body>
+</html>
